@@ -1,6 +1,9 @@
+import json
 from Bio import Entrez
 
+
 Entrez.email = 'hsiaoyi0504@gmail.com'
+
 
 def search(gene_name):
     handle = Entrez.esearch(db='gene', retmax=10, term='human[ORGN] AND {}[GENE]'.format(gene_name), idtype='acc')
@@ -10,15 +13,18 @@ def search(gene_name):
     record = Entrez.read(handle)
     return str(record['DocumentSummarySet']['DocumentSummary'][0]['Summary'])
 
+
 def test_search():
     summary_text = search('tp53')
     assert type(summary_text) is str
     assert len(summary_text) != 0
 
+
 if __name__ == '__main__':
+    # insert genes you want to build the dictionary into genes list below
     genes = ['TP53', 'CDH1']
     gene_dictionary = {}
     for gene_name in genes:
         gene_dictionary[gene_name] = search(gene_name)
-    print(gene_dictionary)
-    
+    with open('data.json', 'w') as outfile:
+        json.dump(gene_dictionary, outfile)

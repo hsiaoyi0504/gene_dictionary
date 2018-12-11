@@ -1,5 +1,7 @@
 # Gene Dictionary
 
+Build simple gene dictionary using data from NCBI gene database.
+
 ## Prerequisite
 
 - Python 3.7
