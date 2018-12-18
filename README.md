@@ -10,7 +10,8 @@ Build simple gene dictionary using data from NCBI gene database.
      1. edit the list of genes in **search.py**
      1. `pipenv run search`
    - Use local copy of NCBI gene database
-     1. T.B.D
+     1. edit the list of genes in **extract.py**
+     1. `pipenv run extract`
 1. result will be saved in **data.json**
 
 ### Prerequisite
