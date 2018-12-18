@@ -5,8 +5,8 @@ from Bio import Entrez
 Entrez.email = 'hsiaoyi0504@gmail.com'
 
 
-def search(gene_name):
-    handle = Entrez.esearch(db='gene', retmax=10, term='human[ORGN] AND {}[GENE]'.format(gene_name), idtype='acc')
+def search(gene_name, organism='human'):
+    handle = Entrez.esearch(db='gene', retmax=1, term='{}[ORGN] AND {}[GENE]'.format(organism, gene_name), idtype='acc')
     record = Entrez.read(handle)
     handle.close()
     handle = Entrez.esummary(db='gene', id=record['IdList'][0])
