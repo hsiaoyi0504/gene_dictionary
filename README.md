@@ -7,10 +7,11 @@ Build simple gene dictionary using data from NCBI gene database.
 1. Install the prerequisite and follow the installation steps shown below.
 1. Choose one of two methods:
    - Acquire data through NCBI's API
-     1. edit the list of genes in **main.py**
-     1. `pipenv run start`
+     1. edit the list of genes in **search.py**
+     1. `pipenv run search`
    - Use local copy of NCBI gene database
      1. T.B.D
+1. result will be saved in **data.json**
 
 ### Prerequisite
 

@@ -13,5 +13,5 @@ biopython = "*"
 python_version = "3.7"
 
 [scripts]
-start = "python main.py"
-test = "pytest main.py"
+search = "python search.py"
+test = "pytest search.py"
