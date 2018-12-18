@@ -1,1 +1,3 @@
 .pytest_cache
+/gene_database.xml
+/Homo_sapiens.ags.gz
